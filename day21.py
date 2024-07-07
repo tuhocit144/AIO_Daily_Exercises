@@ -63,6 +63,7 @@ def print_result(docs, mt_tf_idf):
 
 
 if __name__ == "__main__":
+    print('Chương trình tính tần suất 1 từ trong 1 docments')
     tf = compute_tf()
     idf = compute_idf()
     tf_idf = compute_tf_idf(tf, idf)
