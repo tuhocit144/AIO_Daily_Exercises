@@ -42,7 +42,7 @@ print("Ma trận Value V:\n", V)
 scores = np.dot(Q, K.T)
 
 d_k = K.shape[1]
-print('d_k=', d_k)
+
 scores = scores/np.sqrt(d_k)
 print("Điểm số scores: \n", scores)
 # B4: ap dung ham sofmax
