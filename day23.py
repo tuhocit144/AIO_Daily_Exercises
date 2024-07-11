@@ -3,11 +3,6 @@ import numpy as np
 
 def create_position_matrix(seq_length, embed_size):
     position_matrix = np.zeros((seq_length, embed_size))
-    # Your Code Here #
-    # position_matrix[:, 0::2] = [
-    #  [i*k for i in range(embed_size)] for k in range(0, seq_length)]
-    # position_matrix[:, 1::2] = [
-    # [i*k for i in range(embed_size)] for k in range(1, seq_length)]
     position_matrix[:, 0::2] = [[np.sin(pos/np.power(10000, i/embed_size))
                                  for i in range(0, embed_size, 2)] for pos in range(seq_length)]
     position_matrix[:, 1::2] = [[np.cos(pos/np.power(10000, i/embed_size))
