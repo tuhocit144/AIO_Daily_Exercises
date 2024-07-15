@@ -1,1 +1,0 @@
-np.dot(Q, np.transpose(K))
