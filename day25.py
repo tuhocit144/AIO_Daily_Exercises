@@ -32,7 +32,7 @@ fig, axes = plt.subplots(2, 2, figsize=(10, 6))
 ax = axes.ravel()
 
 ax[0].imshow(img)
-ax[0].set_title(f'Original Image')
+ax[0].set_title('Original Image')
 ax[0].axis('off')
 for i in range(len(sigmas)):
     kernel = gaussian_kernel(5, sigmas[i])
