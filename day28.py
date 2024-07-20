@@ -3,34 +3,34 @@
 import numpy as np
 
 
-def sum_coloumn_of_matrix(A):
-    column_sum = np.einsum('ij->j', A)
+def sum_coloumn_of_matrix(matrix):
+    column_sum = np.einsum('ij->j', matrix)
     return column_sum
 
 # Bai tap 2: tinh tich vo huong cua 2 ma tran
 
 
-def dot_2_matrix(A, B):
-    dot_product = np.einsum('ij,ij->', A, B)
+def dot_2_matrix(matrix_1, matrix_2):
+    dot_product = np.einsum('ij,ij->', matrix_1, matrix_2)
     return dot_product
 # BT3:Tinh tong cac phan tu tren duong cheo chinh cua ma tran
 
 
-def sum_diagonal_matrix(A):
-    sum_diagonal = np.einsum('ii->', A)
+def sum_diagonal_matrix(matrix):
+    sum_diagonal = np.einsum('ii->', matrix)
     return sum_diagonal
 # BT4 nhan 2 ma tran
 
 
-def multiply_2matrix(A, B):
-    multiply = np.einsum('ij,jk->ik', A, B)
+def multiply_2matrix(matrix1, matrix2):
+    multiply = np.einsum('ij,jk->ik', matrix1, matrix2)
     return multiply
 
 # BT 5 outer product
 
 
-def outer_product(A, B):
-    outer = np.einsum('i,j->ij', A, B)
+def outer_product(matrix1, matrix2):
+    outer = np.einsum('i,j->ij', matrix1, matrix2)
     return outer
 
 # BT6: tinh ma tran Gram của 1 Tensor 3D
